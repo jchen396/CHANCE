@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import {mobile} from "../responsive"
 
 const Container = styled.div`
     width: 100vw;
@@ -7,7 +8,9 @@ const Container = styled.div`
         rgba(255,255,255, 0.5),
         rgba(255,255,255, 0.5)), 
         url("https://img.freepik.com/free-photo/blonde-woman-with-perfect-wavy-hairstyle-pink-party-dress-posing-hight-heels_273443-1636.jpg?t=st=1652075764~exp=1652076364~hmac=0a3c22f02d415d4dade3189d4bd8cb5dd709f0b4f3d1d92202d3166cd5027017&w=996") 
-        center;
+        center
+        no-repeat;
+        background-size: cover;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -16,6 +19,7 @@ const Wrapper = styled.div`
     width: 40%;
     padding: 20px;
     background-color:white;
+    ${mobile({width:"75%"})}
 `;
 const Title = styled.div`
     font-size: 24px;

@@ -4,24 +4,29 @@ import Newsletter from "../components/Newsletter";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Add, Remove } from "@material-ui/icons";
+import {mobile} from "../responsive"
 
 const Container  = styled.div``;
 const Wrapper  = styled.div`
     padding: 50px;
     display: flex;
+    ${mobile({padding:"10px",flexDirection:"column"})}
 `;
 const ImgContainer  = styled.div`
     flex:1;
     display: flex;
 `;
 const Image  = styled.img`
-    width: 50%;
+    width: 100%;
     height: 90vh;
     object-fit: cover;
+    ${mobile({height:"40vh"})}
 `;
 const InfoContainer  = styled.div`
     flex:1;
     padding: 0px 50px;
+    ${mobile({padding:"10px"})}
+
 `;
 const Title  = styled.h1`
     font-weight: 200;
@@ -38,6 +43,7 @@ const FilterContainer = styled.div`
     margin: 30px 0px;
     display: flex;
     justify-content: space-between;
+    ${mobile({width:"100%"})}
 `;
 const Filter = styled.div`
     display: flex;
@@ -65,6 +71,7 @@ const AddContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 50%;
+    ${mobile({width:"100%"})}
 `;
 const AmountContainer = styled.div`
     display: flex;
@@ -100,38 +107,38 @@ const Product = () => {
         <Wrapper>
             <ImgContainer>
                 <Image src="https://cdn2.sculpteo.com/blog/wp-content/uploads/2018/05/3Dprintedknit-min.jpg"/>
-                <InfoContainer>
-                    <Title>Sweater</Title>
-                    <Desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta obcaecati modi a est aliquam veritatis dolore temporibus cupiditate minima, vel rerum nam soluta adipisci vero commodi nulla sint placeat?</Desc>
-                    <Price>$20</Price>
-                    <FilterContainer>
-                        <Filter>
-                            <FilterTitle>Color</FilterTitle>
-                            <FilterColor color="black"/>
-                            <FilterColor color="darkblue"/>
-                            <FilterColor color="gray"/>
-                        </Filter>
-                        <Filter>
-                            <FilterTitle>Size</FilterTitle>
-                            <FilterSize>
-                            <FilterSizeOption>XS</FilterSizeOption>
-                            <FilterSizeOption>S</FilterSizeOption>
-                            <FilterSizeOption>M</FilterSizeOption>
-                            <FilterSizeOption>L</FilterSizeOption>
-                            <FilterSizeOption>XL</FilterSizeOption>
-                            </FilterSize>
-                        </Filter>
-                    </FilterContainer>
-                    <AddContainer>
-                        <AmountContainer>
-                            <Remove/>
-                            <Amount>1</Amount>
-                            <Add/>
-                        </AmountContainer>
-                        <Button>ADD TO CART</Button>
-                    </AddContainer>
-                </InfoContainer>
             </ImgContainer>
+            <InfoContainer>
+                <Title>Sweater</Title>
+                <Desc>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta obcaecati modi a est aliquam veritatis dolore temporibus cupiditate minima, vel rerum nam soluta adipisci vero commodi nulla sint placeat?</Desc>
+                <Price>$20</Price>
+                <FilterContainer>
+                    <Filter>
+                        <FilterTitle>Color</FilterTitle>
+                        <FilterColor color="black"/>
+                        <FilterColor color="darkblue"/>
+                        <FilterColor color="gray"/>
+                    </Filter>
+                    <Filter>
+                        <FilterTitle>Size</FilterTitle>
+                        <FilterSize>
+                        <FilterSizeOption>XS</FilterSizeOption>
+                        <FilterSizeOption>S</FilterSizeOption>
+                        <FilterSizeOption>M</FilterSizeOption>
+                        <FilterSizeOption>L</FilterSizeOption>
+                        <FilterSizeOption>XL</FilterSizeOption>
+                        </FilterSize>
+                    </Filter>
+                </FilterContainer>
+                <AddContainer>
+                    <AmountContainer>
+                        <Remove/>
+                        <Amount>1</Amount>
+                        <Add/>
+                    </AmountContainer>
+                    <Button>ADD TO CART</Button>
+                </AddContainer>
+            </InfoContainer>
         </Wrapper>
         <Newsletter/>
         <Footer/>

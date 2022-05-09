@@ -3,10 +3,13 @@ import styled from "styled-components"
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import {mobile} from "../responsive"
 
 const Container = styled.div``;
 const Wrapper = styled.div`
     padding: 20px;
+    ${mobile({padding:"10px"})}
+
 `;
 const Title = styled.h1`
     font-weight: 300;
@@ -26,7 +29,9 @@ const TopButton = styled.button`
     background-color: ${props=>props.type === "filled" ? "black" : "transparent"};
     color: ${props=>props.type === "filled" && "white"};
 `;
-const TopTexts =styled.div``;
+const TopTexts =styled.div`
+    ${mobile({display:'none'})}
+`;
 const TopText = styled.span`
     text-decoration: underline;
     cursor: pointer;
@@ -35,6 +40,8 @@ const TopText = styled.span`
 const Bottom = styled.div`
     display: flex;
     justify-content: space-between;
+    ${mobile({flexDirection:"column"})}
+
 `;
 const Info = styled.div`
     flex: 3;
@@ -42,6 +49,8 @@ const Info = styled.div`
 const Product = styled.div`
     display: flex;
     justify-content: space-between;
+    ${mobile({flexDirection:"column"})}
+
 `;
 const ProductDetail = styled.div`
     flex: 2;
@@ -80,10 +89,12 @@ const ProductAmountContainer = styled.div`
 const ProductAmount = styled.div`
     font-size: 24px;
     margin: 5px;
+    ${mobile({margin:"5px 15px"})}
 `;
 const ProductPrice = styled.div`
     font-size: 30px;
     font-weight: 200;
+    ${mobile({marginBottom:"20px"})}
 `;
 const Hr = styled.hr`
     background-color: #eee;
@@ -138,8 +149,8 @@ const Cart = () => {
                         <ProductDetail>
                             <Image src="http://cdn.shopify.com/s/files/1/1104/4168/products/AA000YM_SHOE_ANGLE_GLOBAL_MENS_TREE_DASHER_2.0_Natural_Black_Blizzard_600x600.png?v=1645548577"/>
                             <Detail>
-                                <ProductName><b>Product:</b>JESSIE THUNDER SHOES</ProductName>
-                                <ProductId><b>ID:</b>93813718293</ProductId>
+                                <ProductName><b>Product: </b>JESSIE THUNDER SHOES</ProductName>
+                                <ProductId><b>ID: </b>93813718293</ProductId>
                                 <ProductColor color="black"/>
                                 <ProductSize><b>Size:</b> 9.5</ProductSize>
                             </Detail>
@@ -158,8 +169,8 @@ const Cart = () => {
                         <ProductDetail>
                             <Image src="https://res.cloudinary.com/teepublic/image/private/s--heH-Xlpa--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,h_626/c_crop,g_north_west,h_626,w_470,x_-65,y_0/g_north_west,u_upload:v1462829019:production:blanks:eabj4jnnotiueowzmy6k,x_-460,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1446244017/production/designs/295076_2.jpg"/>
                             <Detail>
-                                <ProductName><b>Product:</b>HAKURA T-SHIRT</ProductName>
-                                <ProductId><b>ID:</b>93813718293</ProductId>
+                                <ProductName><b>Product: </b>HAKURA T-SHIRT</ProductName>
+                                <ProductId><b>ID: </b>93813718293</ProductId>
                                 <ProductColor color="gray"/>
                                 <ProductSize><b>Size:</b> M</ProductSize>
                             </Detail>
