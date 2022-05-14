@@ -39,14 +39,14 @@ const Button = styled.button`
 
 export const CategoryItem = ({ item }) => {
     return (
-        <Link to={`/products/${item.cat}`}>
-            <Container>
+        <Container>
+            <Link to={`/products/${item.cat}`}>
                 <Image src={item.img} />
                 <Info>
                     <Title>{item.title}</Title>
                     <Button>SHOP NOW</Button>
                 </Info>
-            </Container>
-        </Link>
+            </Link>
+        </Container>
     );
 };
