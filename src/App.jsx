@@ -18,8 +18,8 @@ const App = () => {
         <Router>
             <Routes>
                 <Route exact path="/" element={<Home />} />
-                <Route path="/products" element={<ProductList />} />
-                <Route path="/products/:id" element={<Product />} />
+                <Route path="/products/:category" element={<ProductList />} />
+                <Route path="/pokeducts/:id" element={<Product />} />
                 <Route path="/cart" element={<Cart />} />
 
                 <Route
