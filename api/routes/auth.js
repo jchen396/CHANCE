@@ -22,7 +22,7 @@ router.post("/register", async (req, res) => {
     }
 });
 
-//LGIN
+//LOGIN
 
 router.post("/login", async (req, res) => {
     try {

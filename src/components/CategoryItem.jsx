@@ -29,12 +29,15 @@ const Title = styled.h1`
     margin-bottom: 20px;
 `;
 const Button = styled.button`
-    border: none;
+    border: white solid 1px;
     padding: 10px;
-    background-color: white;
-    color: gray;
+    background-color: black;
+    color: #ffff;
     cursor: pointer;
     font-weight: 600;
+    &:hover {
+        opacity: 0.8;
+    }
 `;
 
 export const CategoryItem = ({ item }) => {

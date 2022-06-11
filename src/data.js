@@ -4,21 +4,24 @@ export const sliderItems = [
         img: "https://www.fashiongonerogue.com/wp-content/uploads/2020/05/Model-Floral-Print-Mini-Dress-Sunglasses-Bag.jpg",
         title: "SUMMER SALE",
         desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-        bg: "#f5fafd",
+        bg: "#ffffff",
+        color: "black",
     },
     {
         id: 2,
-        img: "https://spaceandlight.la/wp-content/uploads/2021/02/ecommerce-on-model-header-3.jpg",
+        img: "https://static.onecms.io/wp-content/uploads/sites/24/2021/09/03/womens-sweater-dress-labor-day-getty-tout.jpg",
         title: "AUTUMN SALE",
         desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-        bg: "#fcf1ed",
+        bg: "#d3d3d3",
+        color: "black",
     },
     {
         id: 3,
         img: "https://pencilone.com//wp-content/uploads/2018/06/Model-sample-1.jpg",
         title: "LOUNGEWEAR LOVE",
         desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-        bg: "#fbf0f4",
+        bg: "black",
+        color: "#ffffff",
     },
 ];
 

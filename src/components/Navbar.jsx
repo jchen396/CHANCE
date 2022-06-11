@@ -11,7 +11,7 @@ const Container = styled.div`
     ${mobile({ height: "50px" })}
 `;
 const Left = styled.div`
-    flex: 1;
+    flex: 3;
     display: flex;
     align-items: center;
 `;
@@ -43,9 +43,12 @@ const Center = styled.div`
 const Logo = styled.h1`
     font-weight: bold;
     ${mobile({ fontSize: "24px" })}
+    a:link {
+        text-decoration: none;
+    }
 `;
 const Right = styled.div`
-    flex: 1;
+    flex: 3;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -63,6 +66,9 @@ const MenuItem = styled.div`
     cursor: pointer;
     margin-left: 25px;
     ${mobile({ fontSize: "12px", marginLeft: "10px" })}
+    &:hover {
+        opacity: 0.8;
+    }
 `;
 
 const Navbar = () => {
@@ -79,15 +85,36 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Center>
-                    <Link to="/">
-                        <Logo>LAMA.</Logo>
+                    <Link
+                        to="/"
+                        style={{
+                            textDecoration: "none",
+                            color: "black",
+                            display: "flex ",
+                            justifyContent: "center",
+                            justifySelf: "center",
+                            alignSelf: "center",
+                        }}
+                    >
+                        <img
+                            src={require("./../pic/clover.jpeg")}
+                            alt="clover"
+                            style={{ height: "40px", width: "40px" }}
+                        />
+                        <Logo>CHANCE</Logo>
                     </Link>
                 </Center>
                 <Right>
-                    <Link to="/register">
+                    <Link
+                        to="/register"
+                        style={{ textDecoration: "none", color: "black" }}
+                    >
                         <MenuItem>REGISTER</MenuItem>
                     </Link>
-                    <Link to="/login">
+                    <Link
+                        to="/login"
+                        style={{ textDecoration: "none", color: "black" }}
+                    >
                         <MenuItem>SIGN IN</MenuItem>
                     </Link>
                     <Link to="/cart">
