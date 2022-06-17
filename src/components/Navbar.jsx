@@ -97,7 +97,7 @@ const Navbar = () => {
                         }}
                     >
                         <img
-                            src={require("./../pic/clover.jpeg")}
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Clover_symbol.svg/1024px-Clover_symbol.svg.png"
                             alt="clover"
                             style={{ height: "40px", width: "40px" }}
                         />
