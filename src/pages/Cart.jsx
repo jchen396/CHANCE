@@ -224,11 +224,11 @@ const Cart = () => {
                             <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
                         </SummaryItem>
                         <StripeCheckout
-                            name="Lama Shop"
-                            image="https://avatars.githubusercontent.com/u/1486366?v=4"
+                            name="CHANCE"
+                            image="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Clover_symbol.svg/1024px-Clover_symbol.svg.png"
                             billingAddress
                             shippingAddress
-                            description={`Your total is ${cart.total}`}
+                            description={`Your total is $${cart.total}`}
                             amount={cart.total * 100}
                             token={onToken}
                             stripeKey={KEY}
