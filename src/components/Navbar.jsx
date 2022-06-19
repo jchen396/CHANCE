@@ -5,6 +5,9 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { useDispatch } from "react-redux";
+import { logoutStart } from "../redux/userRedux";
+import { logoutProduct } from "../redux/cartRedux";
 
 const Container = styled.div`
     height: 60px;
@@ -74,7 +77,13 @@ const MenuItem = styled.div`
 const Navbar = () => {
     const quantity = useSelector((state) => state.cart.quantity);
     const user = useSelector((state) => state.user.currentUser);
+    const dispatch = useDispatch();
     console.log(user);
+
+    const handleLogOut = () => {
+        dispatch(logoutStart());
+        dispatch(logoutProduct());
+    };
     return (
         <Container>
             <Wrapper>
@@ -108,7 +117,8 @@ const Navbar = () => {
                 {user ? (
                     <Right>
                         {" "}
-                        {user.username}
+                        <h3>{user.username}</h3>
+                        <MenuItem onClick={handleLogOut}>LOG OUT</MenuItem>
                         <Link to="/cart">
                             <MenuItem>
                                 <Badge badgeContent={quantity} color="primary">
