@@ -10,6 +10,7 @@ import { logoutStart } from "../redux/userRedux";
 import { logoutProduct } from "../redux/cartRedux";
 
 const Container = styled.div`
+    background-color: #ffff;
     height: 60px;
     ${mobile({ height: "50px" })}
 `;

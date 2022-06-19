@@ -7,6 +7,8 @@ const Container = styled.div`
     margin: 3px;
     height: 70vh;
     position: relative;
+    border: 2px black solid;
+    border-radius: 5px;
 `;
 const Image = styled.img`
     width: 100%;
