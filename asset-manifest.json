@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/e-commerce-app/static/js/main.122a9d1d.js",
-    "index.html": "/e-commerce-app/index.html",
-    "main.122a9d1d.js.map": "/e-commerce-app/static/js/main.122a9d1d.js.map"
+    "main.js": "/chance/static/js/main.c4c0f9df.js",
+    "index.html": "/chance/index.html",
+    "main.c4c0f9df.js.map": "/chance/static/js/main.c4c0f9df.js.map"
   },
   "entrypoints": [
-    "static/js/main.122a9d1d.js"
+    "static/js/main.c4c0f9df.js"
   ]
 }
